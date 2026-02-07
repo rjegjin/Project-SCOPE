@@ -24,7 +24,7 @@
 
 ## 3. Architecture & Conventions
 - **Engine Logic:**
-  - Input: `data/*.yaml`
+  - Input: `data/*.yaml` (or Legacy HTML via `legacy_to_yaml.py`)
   - Logic: `build_all.py` (orchestrates `generate_lesson.py`, `export_exam.py`, `export_ppt.py`)
   - Output: `units/*.md`, `output/*.html`, `output/*.pptx`
 - **Sli.dev:**

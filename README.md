@@ -52,6 +52,7 @@ Project-SCOPE/
 ├── data/               # [입력] 수업 내용이 담긴 YAML 파일들
 ├── scripts/            # [엔진] 파이썬 자동화 스크립트 모음
 │   ├── build_all.py    # 전체 빌드 마스터 스크립트
+│   ├── legacy_to_yaml.py # 기존 HTML 자료 변환기
 │   └── ...
 ├── templates/          # [틀] 슬라이드/시험지 디자인 템플릿 (Jinja2)
 ├── units/              # [출력 1] 생성된 마크다운 슬라이드
