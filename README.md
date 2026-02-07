@@ -50,12 +50,14 @@ pip install -r requirements.txt  # (필요 시) pip install pyyaml jinja2 python
 ```text
 Project-SCOPE/
 ├── data/               # [입력] 수업 내용이 담긴 YAML 파일들
+├── scripts/            # [엔진] 파이썬 자동화 스크립트 모음
+│   ├── build_all.py    # 전체 빌드 마스터 스크립트
+│   └── ...
 ├── templates/          # [틀] 슬라이드/시험지 디자인 템플릿 (Jinja2)
 ├── units/              # [출력 1] 생성된 마크다운 슬라이드
 ├── output/             # [출력 2] 생성된 시험지 및 PPTX
 ├── public/             # 이미지 자산 저장소
-├── components/         # Vue.js 커스텀 컴포넌트 (VideoPlayer 등)
-└── scripts/            # 파이썬 자동화 스크립트 (generate_lesson.py 등)
+└── components/         # Vue.js 커스텀 컴포넌트 (VideoPlayer 등)
 ```
 
 ## 🛠️ Tech Stack

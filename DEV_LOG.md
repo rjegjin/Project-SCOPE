@@ -1,9 +1,10 @@
 # DEV_LOG.md - Project S.C.O.P.E.
 
-## [2026-02-07] - Documentation & Git Integration
-- **Action:** Finalized project documentation and synchronized with GitHub.
+## [2026-02-07] - Code Refactoring & Optimization
+- **Action:** Reorganized project structure for better maintainability.
 - **Details:**
-    - Created `README.md` for project overview and installation guide.
-    - Updated `GEMINI.md` with strict **Memory Protocols** (Read/Write DEV_LOG).
-    - Pushed all local changes (Engine, Units, Assets) to remote repository (`origin main`).
-- **Status:** Project is fully synced, documented, and operational. Ready for deployment or new content creation.
+    - Moved all Python scripts to `scripts/` directory.
+    - Updated `build_all.py`, `generate_lesson.py`, `export_exam.py`, `export_ppt.py`, `quiz_extractor.py` to use **absolute paths** relative to the project root.
+    - Modified `.bat` files to reference the new script locations.
+    - Updated `README.md` to reflect the new structure.
+- **Status:** Codebase is clean, modular, and path-safe.
