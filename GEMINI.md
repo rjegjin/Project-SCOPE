@@ -1,40 +1,40 @@
-# Project S.C.O.P.E. (Science Classroom Observation & Performance Engine)
+# Project S.C.O.P.E. - AI Context & Rules
 
 ## 1. Project Overview
-- **Goal:** Integrate and automate the workflow for middle school science teachers: [Material Creation -> Real-time Observation -> Assessment -> Record Entry].
-- **Philosophy:** **Single Source of Truth (SSoT)**. A single Markdown file generates slides, worksheets, item banks, and evaluation systems.
-- **Target:** Minimize administrative burden, maximize student interaction.
+- **Goal:** Automate science lesson material creation using a "Single Source of Truth" approach.
+- **Core Engine:** `S.C.O.P.E. Engine` converts `YAML` data into `Sli.dev Slides`, `HTML Exams`, and `PPTX`.
 
-## 2. 🧠 Memory & Work Rules
-- **Code-First Analysis:** Always check `components/` for Vue logic and `src/` for Python scripts before suggesting changes.
-- **Sli.dev Convention:** Adhere to Sli.dev's Markdown structure and UnoCSS/Tailwind styling.
-- **Sequential Logging:** Record every architectural decision, component addition, and roadmap progress in `DEV_LOG.md`.
-- **Korean School Context:** Naturally use terms like '수행평가' (Performance Assessment), '지필평가' (Paper-and-pencil Test), '생기부' (School Records), and '나이스' (NEIS).
-- **Design Consistency:** Follow the Emerald theme and Slate text color scheme.
+## 2. 🧠 Memory & Work Protocol (CRITICAL)
+**Gemini MUST adhere to the following workflow for every session:**
 
-## 3. Tech Stack
-- **Presentation:** [Sli.dev](https://sli.dev/) (Markdown + Vue.js + UnoCSS/Tailwind)
-- **Data Management:** Markdown Frontmatter + JSON/YAML
-- **Automation:** Python (Pandoc, Jinja2)
-- **UI/UX:** Vue 3 components, Tailwind CSS (Palette: Emerald, Slate, Amber, Blue)
+### 🚨 Rule 1: Initialization (Start)
+- **Action:** At the beginning of *every* chat or task, **READ `DEV_LOG.md` FIRST**.
+- **Reason:** To restore the exact context, understand the latest architectural decisions, and continue work seamlessly.
 
-## 4. Markdown Conventions & S.C.O.P.E. Engine
-- **Workflow:** `YAML Data` -> `generate_lesson.py` -> `Markdown Slide` + `Exam HTML` + `PPTX`
-- **Layouts:** Use standard layouts (`default`, `image-right`, `two-cols`).
-- **Custom Components:**
-  - `<VideoSegmentPlayer />`: Interactive YouTube segments.
-  - `<LabCard />`: Step-by-step experiment visualization.
-- **Quiz Tagging:**
+### 🚨 Rule 2: Termination (End)
+- **Action:** Before finishing a task involving code changes, file creation, or structural updates, **APPEND to `DEV_LOG.md`**.
+- **Format:**
   ```markdown
-  ::: quiz {id: "m-01", type: "multiple-choice", difficulty: "mid"}
-  Question...
-  - [ ] Choice 1
-  - [x] Correct Answer
-  :::
+  ## [YYYY-MM-DD] - Task Name
+  - **Action:** Summary of what was done.
+  - **Details:** Specific files created, bugs fixed, or features added.
+  - **Status:** Current project state and next steps.
   ```
+- **Constraint:** Do not ask the user if they want to log. **Just do it.**
 
-## 5. Roadmap
-- **Phase 1:** Optimization of lesson tools (Legacy HTML to Sli.dev Vue). [Completed: Mitosis, Meiosis, Mendel]
-- **Phase 2:** Digitization of Assessment Plans (Metadata conversion). [Completed: Quiz Extractor & Exam Generator]
-- **Phase 3:** Interactive Observation App (Real-time checklist UI).
-- **Phase 4:** Automatic Report Generation (Jinja2 templates for School Records).
+## 3. Architecture & Conventions
+- **Engine Logic:**
+  - Input: `data/*.yaml`
+  - Logic: `build_all.py` (orchestrates `generate_lesson.py`, `export_exam.py`, `export_ppt.py`)
+  - Output: `units/*.md`, `output/*.html`, `output/*.pptx`
+- **Sli.dev:**
+  - Components: Use `<VideoSegmentPlayer>` for YouTube, `<LabCard>` for experiments.
+  - Styling: Tailwind CSS (Emerald/Amber theme) via `styles/index.css` and `uno.config.ts`.
+- **Git:**
+  - Always check `git status` before committing.
+  - Commit messages should be descriptive: `feat:`, `fix:`, `docs:`, `refactor:`.
+
+## 4. Roadmap Status
+- **Phase 1 (Legacy Migration):** ✅ Complete (Mitosis, Meiosis, Mendel).
+- **Phase 2 (Automation Engine):** ✅ Complete (YAML -> Multi-output).
+- **Phase 3 (Expansion):** 🚧 Ready to deploy to Vercel & add more units.
