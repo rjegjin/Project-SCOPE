@@ -1,0 +1,24 @@
+/* Noto Sans KR 폰트 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+/* 전역 폰트 설정 */
+:root {
+  --slidev-theme-font-sans: 'Noto Sans KR', sans-serif;
+  --slidev-theme-font-serif: 'Noto Sans KR', serif; /* 세리프 테마에서도 고딕 사용 (가독성 위함) */
+  --slidev-code-font-family: 'Fira Code', monospace;
+}
+
+/* 기본 배경 및 텍스트 색상 (기존 HTML bg-slate-50 text-slate-800 반영) */
+.slidev-layout {
+  @apply bg-slate-50 text-slate-800;
+}
+
+/* 강조색 설정 */
+strong {
+  @apply text-emerald-600 font-bold;
+}
+
+/* 퀴즈 박스 스타일 */
+.quiz-box {
+  @apply bg-white p-8 rounded-2xl shadow-lg border-2 border-emerald-500;
+}

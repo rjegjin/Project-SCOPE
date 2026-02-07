@@ -1,0 +1,80 @@
+[
+  {
+    "id": "mitosis-01",
+    "type": "multiple-choice",
+    "difficulty": "mid",
+    "question": "체세포 분열 결과 만들어진 딸세포의 염색체 수 변화로 옳은 것은?",
+    "choices": [
+      {
+        "text": "모세포의 절반으로 줄어든다.",
+        "is_correct": false
+      },
+      {
+        "text": "모세포와 동일하게 유지된다.",
+        "is_correct": true
+      },
+      {
+        "text": "모세포의 두 배로 늘어난다.",
+        "is_correct": false
+      },
+      {
+        "text": "시기에 따라 불규칙하게 변한다.",
+        "is_correct": false
+      }
+    ],
+    "answer": "모세포와 동일하게 유지된다.",
+    "source_file": "01_cell_division.md"
+  },
+  {
+    "id": "meiosis-01",
+    "type": "multiple-choice",
+    "difficulty": "mid",
+    "question": "감수 분열의 특징으로 옳은 것을 모두 고르면? (2개)",
+    "choices": [
+      {
+        "text": "분열 결과 4개의 딸세포가 만들어진다.",
+        "is_correct": true
+      },
+      {
+        "text": "분열 결과 염색체 수가 두 배로 늘어난다.",
+        "is_correct": false
+      },
+      {
+        "text": "1분열과 2분열 사이에 DNA 복제가 일어난다.",
+        "is_correct": false
+      },
+      {
+        "text": "상동 염색체가 접합하여 2가 염색체를 형성한다.",
+        "is_correct": true
+      }
+    ],
+    "answer": "상동 염색체가 접합하여 2가 염색체를 형성한다.",
+    "source_file": "01_cell_division.md"
+  },
+  {
+    "id": "fertilization-01",
+    "type": "multiple-choice",
+    "difficulty": "mid",
+    "question": "수정란의 초기 세포 분열인 '난할'의 특징으로 옳은 것은?",
+    "choices": [
+      {
+        "text": "세포 분열 후 세포의 크기가 커진다.",
+        "is_correct": false
+      },
+      {
+        "text": "세포 분열 사이에 생장기가 길다.",
+        "is_correct": false
+      },
+      {
+        "text": "분열이 진행되어도 전체 배아의 크기는 일정하다.",
+        "is_correct": true
+      },
+      {
+        "text": "염색체 수가 절반으로 줄어든다.",
+        "is_correct": false
+      }
+    ],
+    "answer": "분열이 진행되어도 전체 배아의 크기는 일정하다.",
+    "source_file": "02_reproduction.md"
+  }
+]

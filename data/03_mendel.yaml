@@ -1,0 +1,69 @@
+title: V. 생식과 유전
+subtitle: 5. 멘델의 유전 원리
+theme_color: emerald
+
+objectives:
+  - 멘델이 완두를 실험 재료로 선택한 이유를 설명할 수 있다.
+  - 우열의 원리와 분리의 법칙을 유전자 기호로 나타낼 수 있다.
+  - 독립의 법칙이 나타나는 원리를 확률로 이해한다.
+
+opening_question:
+  text: "부모님의 쌍꺼풀은 없는데,\n왜 나에게는 쌍꺼풀이 있을까? 🧬"
+  image: /images/mendel_intro.jpg
+  caption: "유전 형질이 전달되는 신비로운 규칙을 찾아봅시다."
+
+sections:
+  - title: 멘델의 실험 재료 완두
+    content: |
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-500">
+          <h4 class="font-bold mb-2">완두가 좋은 이유</h4>
+          <ul class="list-disc list-inside">
+            <li>재배하기 쉽고 한 세대가 짧다.</li>
+            <li>자손의 수가 많아 통계 처리에 유리하다.</li>
+            <li>대립 형질이 뚜렷하다.</li>
+          </ul>
+        </div>
+        <img src="/images/mendel_pea_traits.jpg" class="rounded shadow h-40 object-cover" />
+      </div>
+
+  - title: 1. 우열의 원리 (Dominance)
+    content: |
+      잡종 1대(F1)에서 우성 형질만 나타나는 원리
+      <div class="p-4 bg-yellow-50 rounded mt-2 border border-yellow-200">
+        YY (황색) x yy (녹색) → Yy (황색 100%)
+      </div>
+
+  - title: 2. 분리의 법칙 (Segregation)
+    content: |
+      생식세포 형성 시 대립 유전자가 분리되어 서로 다른 세포로 들어가는 법칙 (잡종 2대에서 3:1 분리)
+      <div class="mt-4 flex justify-center">
+        <img src="/images/mendel_segregation.jpg" class="rounded shadow-lg h-48" />
+      </div>
+
+  - title: 3. 독립의 법칙 (Independent)
+    content: |
+      두 쌍 이상의 형질이 서로 영향을 주지 않고 독립적으로 유전되는 법칙 (9:3:3:1)
+      <div class="mt-4 flex justify-center">
+        <img src="/images/mendel_independent.jpg" class="rounded shadow-lg h-48" />
+      </div>
+
+quiz:
+  id: mendel-01
+  type: multiple-choice
+  difficulty: high
+  question: "유전자형이 RrYy인 완두를 자가 수분했을 때, 잡종 2대에서 '둥글고 녹색(R_yy)'인 완두가 나타날 확률은?"
+  choices:
+    - text: "1/16"
+      is_correct: false
+    - text: "3/16"
+      is_correct: true
+    - text: "9/16"
+      is_correct: false
+    - text: "4/16"
+      is_correct: false
+
+summary:
+  - "우열의 원리: 잡종 1대에서는 우성만 표현됨"
+  - "분리의 법칙: 생식세포 형성 시 유전자가 분리됨 (3:1)"
+  - "독립의 법칙: 여러 형질은 독립적으로 유전됨 (9:3:3:1)"

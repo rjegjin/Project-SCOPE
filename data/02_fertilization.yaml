@@ -1,0 +1,134 @@
+title: V. 생식과 유전
+subtitle: 3. 수정과 발생
+theme_color: amber
+
+objectives:
+  - 수정란으로부터 개체가 발생하는 과정을 설명할 수 있다.
+  - 정자와 난자의 특징을 비교하고 수정 과정에서의 역할을 이해한다.
+  - 난할과 일반적인 체세포 분열의 차이점을 비교하여 설명할 수 있다.
+
+opening_question:
+  text: "달걀이 병아리가 되기까지\n어떤 과정을 거칠까? 🐣"
+  image: /images/Schematic-drawings-of-chronological-chick-embryo-development.png
+  caption: "하나의 수정란 세포가 복잡한 병아리가 되는 과정"
+
+sections:
+  - title: 생식세포 - 정자와 난자
+    columns:
+      - title: 정자 (Sperm)
+        color: amber
+        list:
+          - 머리(핵)와 꼬리로 구성
+          - 꼬리를 이용해 스스로 움직임
+          - 아버지의 유전 물질(n) 전달
+      - title: 난자 (Ovum)
+        color: amber
+        list:
+          - 정자보다 훨씬 큼 (많은 양분 저장)
+          - 스스로 움직이지 못함
+          - 어머니의 유전 물질(n) 전달
+  
+  - title: 정자와 난자의 구조
+    content: |
+      <div class="flex justify-center">
+        <img src="/images/gametes1_med.jpeg" class="rounded-xl shadow-lg max-w-2xl w-full" />
+      </div>
+      <p class="text-center mt-4 text-slate-500">각자의 역할(이동 vs 양분)에 최적화된 구조</p>
+
+  - title: 수정 (Fertilization)
+    layout: two-cols
+    content: |
+      <div class="bg-white p-6 rounded-xl border-l-4 border-amber-500">
+        <h3 class="font-bold text-xl mb-2 text-amber-800">정의</h3>
+        <p class="text-lg mb-4">정자와 난자가 결합하여 <b>수정란</b>이 되는 과정</p>
+        <ul class="list-disc list-inside text-lg">
+          <li>장소: <b>수란관</b> 상단부</li>
+          <li>결과: 체세포와 같은 염색체 수 회복 (n + n = 2n)</li>
+        </ul>
+      </div>
+    columns: # Using columns mechanism for right side image
+      - image: /images/Staged-penetration-and-fusion-of-the-sperm-nucleus-and-the-centriole-in-the-egg-in-the.png
+        text: "하나의 정자가 난자와 결합하는 순간"
+
+  - title: 발생 ① - 난할 (Cleavage)
+    layout: two-cols
+    content: |
+      <div class="bg-indigo-50 p-6 rounded-xl">
+        <h3 class="font-bold text-xl mb-2 text-indigo-800">특징</h3>
+        <ul class="space-y-2 text-lg">
+          <li><b>빠른 분열:</b> 세포 생장기(간기)가 거의 없음</li>
+          <li><b>세포 크기:</b> 분열할수록 작아짐 (할구)</li>
+          <li><b>전체 크기:</b> 수정란과 거의 동일하게 유지</li>
+        </ul>
+      </div>
+    columns:
+      - image: /images/Cell_Cleavage.png
+        text: "2세포기 → 4세포기 → 8세포기 ..."
+
+  - title: 난할 vs 체세포 분열
+    comparison:
+      headers:
+        - text: 난할 (초기 발생)
+          color: amber
+        - text: 일반 체세포 분열
+          color: emerald
+      rows:
+        - label: 분열 속도
+          cells: ["매우 빠름", "보통"]
+        - label: 세포 생장(간기)
+          cells: ["거의 없음 (생략)", "있음 (세포가 커짐)"]
+        - label: 딸세포 크기
+          cells: ["점점 작아짐", "모세포와 비슷함"]
+        - label: 전체 크기
+          cells: ["일정함", "커짐 (생장)"]
+
+  - title: 발생 ② - 착상과 태반
+    columns:
+      - title: 착상 (Implantation)
+        color: pink
+        text: "수정 후 5~7일 뒤, 배아가 <b>자궁 내막</b>에 파고드는 현상. 이때부터 <b>임신</b>으로 간주함."
+        image: /images/uterus_implantation.jpg
+      - title: 태반 (Placenta)
+        color: red
+        text: "모체와 태아 사이의 물질 교환 장소. (산소/영양소 공급, 노폐물 배출)"
+
+  - title: 태아의 성장 과정
+    content: |
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded-xl shadow-md">
+          <img src="/images/fetus_11_weeks.jpg" class="rounded-lg h-40 w-full object-cover mb-2"/>
+          <h4 class="font-bold text-center">초기 (11주)</h4>
+          <p class="text-sm text-center">주요 기관 형성, 사람 모습 갖춤</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md">
+          <img src="/images/fetus_21_weeks.jpg" class="rounded-lg h-40 w-full object-cover mb-2"/>
+          <h4 class="font-bold text-center">중기 (21주)</h4>
+          <p class="text-sm text-center">활발한 태동, 급격한 성장</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md">
+          <img src="/images/fetus_37_weeks.jpg" class="rounded-lg h-40 w-full object-cover mb-2"/>
+          <h4 class="font-bold text-center">후기 (37주)</h4>
+          <p class="text-sm text-center">출산 준비 완료 (약 266일 후 출산)</p>
+        </div>
+      </div>
+
+quiz:
+  id: fertilization-01
+  type: multiple-choice
+  difficulty: mid
+  question: "수정란의 초기 세포 분열인 '난할'의 특징으로 옳은 것은?"
+  choices:
+    - text: "세포 분열 후 세포의 크기가 커진다."
+      is_correct: false
+    - text: "세포 분열 사이에 생장기가 길다."
+      is_correct: false
+    - text: "분열이 진행되어도 전체 배아의 크기는 일정하다."
+      is_correct: true
+    - text: "염색체 수가 절반으로 줄어든다."
+      is_correct: false
+
+summary:
+  - "<b>수정</b>은 수란관에서 정자와 난자가 결합하는 것이다."
+  - "<b>난할</b>은 세포 생장 없이 빠르게 분열하여 전체 크기가 일정하다."
+  - "배아가 자궁 내막에 <b>착상</b>하면 임신이 시작된다."
+  - "<b>태반</b>을 통해 모체로부터 영양소와 산소를 공급받는다."
