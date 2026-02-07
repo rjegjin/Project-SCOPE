@@ -1,6 +1,7 @@
 @echo off
-echo [Project S.C.O.P.E.] ëª¨ë“  ìˆ˜ì—… ìžë£Œ(ìŠ¬ë¼ì´ë“œ, ì‹œí—˜ì§€, PPT)ë¥¼ ì—…ë°ì´íŠ¸í•©ë‹ˆë‹¤...
-python Project-SCOPE/build_all.py
+cd /d "%~dp0"
+echo [Project S.C.O.P.E.] ¸ðµç ¼ö¾÷ ÀÚ·á(½½¶óÀÌµå, ½ÃÇèÁö, PPT)¸¦ ¾÷µ¥ÀÌÆ®ÇÕ´Ï´Ù...
+python scripts/build_all.py
 echo.
-echo ì—…ë°ì´íŠ¸ ì™„ë£Œ! output í´ë”ë¥¼ í™•ì¸í•˜ì„¸ìš”.
+echo ¾÷µ¥ÀÌÆ® ¿Ï·á! output Æú´õ¿Í units Æú´õ¸¦ È®ÀÎÇÏ¼¼¿ä.
 pause
