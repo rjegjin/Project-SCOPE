@@ -23,6 +23,7 @@
 - **Constraint:** Do not ask the user if they want to log. **Just do it.**
 
 ## 3. Architecture & Conventions
+- **Python Environment:** **CRITICAL** - Use root `unified_venv` at `/home/rjegj/projects/unified_venv`. Do not create local venvs.
 - **Engine Logic:**
   - Input: `data/*.yaml` (or Legacy HTML via `legacy_to_yaml.py`)
   - Logic: `build_all.py` (orchestrates `generate_lesson.py`, `export_exam.py`, `export_ppt.py`)
@@ -32,6 +33,7 @@
   - Styling: Tailwind CSS (Emerald/Amber theme) via `styles/index.css` and `uno.config.ts`.
 - **Git:**
   - Always check `git status` before committing.
+  - **Automated Sync:** Automatically perform `git add`, `git commit`, and `git push` after code changes without waiting for explicit instructions.
   - Commit messages should be descriptive: `feat:`, `fix:`, `docs:`, `refactor:`.
 
 ## 4. Roadmap Status
