@@ -11,6 +11,7 @@ drawings:
   persist: false
 transition: slide-left
 title: V. 생식과 유전
+css: unocss
 ---
 
 # V. 생식과 유전
@@ -22,57 +23,37 @@ title: V. 생식과 유전
   </span>
 </div>
 
-<div class="abs-b m-6 flex gap-2">
-  <button @click="$slidev.nav.prev" class="text-xl icon-btn opacity-50 !border-none hover:opacity-100">
-    <div class="i-carbon-caret-left" />
-  </button>
-  <button @click="$slidev.nav.next" class="text-xl icon-btn opacity-50 !border-none hover:opacity-100">
-    <div class="i-carbon-caret-right" />
-  </button>
-</div>
-
 ---
 layout: default
 ---
 
 # 학습 목표 🎯
 
-<div class="flex flex-col h-full justify-center items-center">
-  <div class="bg-white p-10 rounded-2xl shadow-xl border-l-8 border-emerald-500 max-w-2xl">
-    <ul class="space-y-6 text-2xl list-none">
-      
-      <li class="flex items-center gap-4">
-        <div class="i-carbon-checkmark-filled text-emerald-500" />
-        <span>세포 분열의 필요성을 설명할 수 있다.</span>
-      </li>
-      
-      <li class="flex items-center gap-4">
-        <div class="i-carbon-checkmark-filled text-emerald-500" />
-        <span>세포 분열이 개체의 생장과 어떤 관계가 있는지 설명할 수 있다.</span>
-      </li>
-      
-      <li class="flex items-center gap-4">
-        <div class="i-carbon-checkmark-filled text-emerald-500" />
-        <span>세포 크기가 커질 때 표면적과 부피의 변화 관계를 이해하고, 물질 교환 효율과의 연관성을 설명할 수 있다.</span>
-      </li>
-      
-    </ul>
-  </div>
+<div class="bg-emerald-50 p-8 rounded-2xl border-l-8 border-emerald-500 mt-10">
+
+
+- 세포 분열의 필요성을 설명할 수 있다.
+
+- 세포 분열이 개체의 생장과 어떤 관계가 있는지 설명할 수 있다.
+
+- 세포 크기가 커질 때 표면적과 부피의 변화 관계를 이해하고, 물질 교환 효율과의 연관성을 설명할 수 있다.
+
+
 </div>
 
 
 
 
 ---
-
+layout: default
 ---
 
 # 1단계: 생각 깨우기 - 시원한 얼음에서 찾는 힌트!
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 컵에 담긴 음료수를 빨리 시원하게 만들고 싶을 때, 커다란 얼음 덩어리 하나를 넣는 것과 같은 양의 잘게 부순 얼음을 넣는 것 중 어느 쪽이 더 효과적일까요? ① 커다란 얼음 덩어리 ② 잘게 부순 얼음 ③ 효과는 똑같다
-
-
+</div>
 
 
 
@@ -81,15 +62,15 @@ layout: default
 
 
 ---
-
+layout: default
 ---
 
 # 생각 열기 2
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 우리 몸의 세포는왜 이렇게 작을까? 우리 몸은 아주 크지만, 몸을 이루는 세포는 눈에 보이지 않을 정도로 작습니다. 왜 그럴까요?
-
-
+</div>
 
 
 
@@ -98,15 +79,15 @@ layout: default
 
 
 ---
-
+layout: default
 ---
 
 # 세포 분열이란 무엇일까?
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 세포는 생명체를 구성하는 기본 단위입니다. 세포 분열은 하나의 세포가 두 개의 딸세포로 나뉘는 과정입니다. 이때 유전 정보가 그대로 복제되어, 원래 세포(모세포)와 똑같은 세포가 만들어집니다.
-
-
+</div>
 
 
 
@@ -115,15 +96,15 @@ layout: default
 
 
 ---
-
+layout: default
 ---
 
 # 왜 생물은 세포 분열을 해야 할까?
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 생물이 성장하는 것은 세포 크기가 커지는 것이 아니라, 세포 분열로 세포 수가 늘어나기 때문입니다. 또한, 세포는 물질 교환을 효율적으로 하기 위해 분열합니다. (클릭하여 다음 내용 보기)
-
-
+</div>
 
 
 
@@ -132,15 +113,15 @@ layout: default
 
 
 ---
-
+layout: default
 ---
 
 # 세포의 생명 활동과 물질 교환
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 세포는 생명을 유지하기 위해 세포 표면(세포막)을 통해 영양소를 흡수하고 노폐물을 배출하는 물질 교환을 합니다. (클릭하여 다음 내용 보기)
-
-
+</div>
 
 
 
@@ -149,15 +130,15 @@ layout: default
 
 
 ---
-
+layout: default
 ---
 
 # 세포 크기와 물질 교환 효율
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 세포가 커지면 부피는 표면적보다 훨씬 빠르게 증가합니다. 이는 물질 교환의 효율을 떨어뜨려 세포가 계속 커지는 데 한계가 됩니다. (클릭하여 다음 내용 보기)
-
-
+</div>
 
 
 
@@ -166,7 +147,7 @@ layout: default
 
 
 ---
-
+layout: default
 ---
 
 # 정육면체로 알아보는 표면적과 부피
@@ -178,10 +159,8 @@ layout: default
 
 
 
-
-
 ---
-
+layout: default
 ---
 
 # 세포가 분열하는 이유: 효율적인 생존 전략
@@ -193,18 +172,16 @@ layout: default
 
 
 
-
-
 ---
-
+layout: default
 ---
 
 # 코끼리는 쥐보다 세포가 클까?
 
 
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 몸집이 큰 생물은 세포의 크기가 큰 것이 아니라, 세포의 수가 훨씬 더 많습니다. 모든 생물은 효율적인 물질 교환을 위해 세포 크기를 일정하게 유지하려 합니다. (클릭하여 다음 내용 보기)
-
-
+</div>
 
 
 
@@ -217,28 +194,18 @@ layout: default
 
 ---
 layout: center
-class: text-center
 ---
 
 # 핵심 정리 📝
 
-<div class="bg-emerald-600 text-white p-10 rounded-3xl shadow-2xl inline-block text-left max-w-4xl">
-  <ul class="space-y-4 text-xl list-none">
-    
-    <li class="flex items-start gap-4">
-      <div class="i-carbon-checkmark mt-1 flex-shrink-0" />
-      <span>세포 분열의 두 가지 핵심 목적은 생장과 효율적인 물질 교환입니다.</span>
-    </li>
-    
-    <li class="flex items-start gap-4">
-      <div class="i-carbon-checkmark mt-1 flex-shrink-0" />
-      <span>세포가 커질수록 부피에 대한 표면적의 비가 작아져 물질 교환에 불리해집니다.</span>
-    </li>
-    
-    <li class="flex items-start gap-4">
-      <div class="i-carbon-checkmark mt-1 flex-shrink-0" />
-      <span>따라서 몸집이 큰 생물은 세포 크기가 큰 것이 아니라 세포 수가 많은 것입니다.</span>
-    </li>
-    
-  </ul>
+<div class="bg-emerald-600 text-white p-10 rounded-3xl shadow-2xl text-left">
+
+
+- **세포 분열의 두 가지 핵심 목적은 생장과 효율적인 물질 교환입니다.**
+
+- **세포가 커질수록 부피에 대한 표면적의 비가 작아져 물질 교환에 불리해집니다.**
+
+- **따라서 몸집이 큰 생물은 세포 크기가 큰 것이 아니라 세포 수가 많은 것입니다.**
+
+
 </div>

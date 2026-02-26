@@ -11,24 +11,16 @@ drawings:
   persist: false
 transition: slide-left
 title: {{ title }}
+css: unocss
 ---
 
 # {{ title }}
 ## {{ subtitle }}
 
 <div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-6 py-3 rounded-full cursor-pointer transition-colors hover:bg-emerald-500 hover:text-white border border-emerald-500 text-emerald-600 font-bold">
+  <span @click="$slidev.nav.next" class="px-6 py-3 rounded-full cursor-pointer transition-colors hover:bg-{{ theme_color }}-500 hover:text-white border border-{{ theme_color }}-500 text-{{ theme_color }}-600 font-bold">
     학습 시작하기 <div class="inline-block i-carbon-arrow-right" />
   </span>
-</div>
-
-<div class="abs-b m-6 flex gap-2">
-  <button @click="$slidev.nav.prev" class="text-xl icon-btn opacity-50 !border-none hover:opacity-100">
-    <div class="i-carbon-caret-left" />
-  </button>
-  <button @click="$slidev.nav.next" class="text-xl icon-btn opacity-50 !border-none hover:opacity-100">
-    <div class="i-carbon-caret-right" />
-  </button>
 </div>
 
 ---
@@ -37,17 +29,12 @@ layout: default
 
 # 학습 목표 🎯
 
-<div class="flex flex-col h-full justify-center items-center">
-  <div class="bg-white p-10 rounded-2xl shadow-xl border-l-8 border-{{ theme_color }}-500 max-w-2xl">
-    <ul class="space-y-6 text-2xl list-none">
-      {% for objective in objectives %}
-      <li class="flex items-center gap-4">
-        <div class="i-carbon-checkmark-filled text-{{ theme_color }}-500" />
-        <span>{{ objective }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+<div class="bg-{{ theme_color }}-50 p-8 rounded-2xl border-l-8 border-{{ theme_color }}-500 mt-10">
+
+{% for objective in objectives %}
+- {{ objective }}
+{% endfor %}
+
 </div>
 
 {% if opening_question %}
@@ -58,93 +45,58 @@ class: text-center
 
 # 생각 열기 🤔
 
-<p class="text-4xl font-bold text-slate-700 leading-tight">
-  {{ opening_question.text | replace('\n', '<br>') }}
+<p class="text-3xl font-bold text-slate-700 leading-tight mb-8">
+  {{ opening_question.text }}
 </p>
 
 {% if opening_question.image %}
-<div class="mt-8 max-w-2xl mx-auto">
-  <img src="{{ opening_question.image }}" class="rounded-lg shadow-lg max-h-80 mx-auto" />
-  {% if opening_question.caption %}
-  <p class="text-sm text-slate-500 mt-2">{{ opening_question.caption }}</p>
-  {% endif %}
-</div>
+![Opening]({{ opening_question.image }})
+{% if opening_question.caption %}
+<p class="text-sm text-slate-500 mt-2">{{ opening_question.caption }}</p>
+{% endif %}
 {% endif %}
 {% endif %}
 
 {% for section in sections %}
 ---
-{% if section.layout %}
-layout: {{ section.layout }}
-{% endif %}
+layout: {{ section.layout | default('default') }}
 ---
 
 # {{ section.title }}
 
 {% if section.content %}
+<div class="text-lg leading-relaxed text-slate-700 mb-6">
 {{ section.content }}
+</div>
 {% endif %}
 
 {% if section.columns %}
-<div class="grid grid-cols-{{ section.columns | length }} gap-8">
-  {% for col in section.columns %}
-  <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-{{ col.color | default(theme_color) }}-500">
-    {% if col.title %}
-    <h3 class="text-2xl font-bold mb-4 text-{{ col.color | default(theme_color) }}-700">
-      {{ col.title }}
-    </h3>
-    {% endif %}
-    {% if col.text %}
-    <div class="mb-4 text-lg">
-        {{ col.text }}
-    </div>
-    {% endif %}
-    {% if col.list %}
-    <ul class="list-disc list-inside space-y-2 text-lg">
-      {% for item in col.list %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% if col.image %}
-    <img src="{{ col.image }}" class="rounded-lg w-full object-cover mt-4" />
-    {% endif %}
-  </div>
-  {% endfor %}
-</div>
+<div class="grid grid-cols-{{ section.columns | length }} gap-4">
+{% for col in section.columns %}
+<div class="bg-white p-4 rounded-xl shadow border border-slate-100 text-left">
+  
+{% if col.image %}![Col]({{ col.image }}){% endif %}
+{% if col.title %}<h3 class="font-bold text-{{ theme_color }}-700 mb-1">{{ col.title }}</h3>{% endif %}
+{% if col.text %}<p class="text-sm text-slate-600">{{ col.text }}</p>{% endif %}
+{% if col.list %}
+<ul class="text-sm text-slate-700 mt-2 list-disc list-inside">
+{% for item in col.list %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
 {% endif %}
 
-{% if section.video %}
-<VideoSegmentPlayer 
-  videoId="{{ section.video.id }}"
-  :phaseData="{{ section.video.phases }}"
-  {% if section.video.columns %}:columns="{{ section.video.columns }}"{% endif %}
-/>
+</div>
+{% endfor %}
+</div>
 {% endif %}
 
 {% if section.comparison %}
-<div class="bg-white p-6 rounded-xl shadow-lg overflow-x-auto">
-  <table class="w-full text-sm">
-    <thead class="bg-slate-100">
-      <tr>
-        <th class="p-3 text-left">구분</th>
-        {% for header in section.comparison.headers %}
-        <th class="p-3 text-center text-{{ header.color }}-600">{{ header.text }}</th>
-        {% endfor %}
-      </tr>
-    </thead>
-    <tbody class="text-center">
-      {% for row in section.comparison.rows %}
-      <tr class="border-b last:border-b-0">
-        <td class="p-3 font-bold text-left bg-slate-50">{{ row.label }}</td>
-        {% for cell in row.cells %}
-        <td class="p-3">{{ cell }}</td>
-        {% endfor %}
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+| 구분 | {% for header in section.comparison.headers %}{{ header.text }} | {% endfor %}
+| --- | {% for header in section.comparison.headers %} --- | {% endfor %}
+{% for row in section.comparison.rows %}
+| **{{ row.label }}** | {% for cell in row.cells %}{{ cell }} | {% endfor %}
+{% endfor %}
 {% endif %}
 
 {% endfor %}
@@ -154,35 +106,29 @@ layout: {{ section.layout }}
 layout: center
 ---
 
-# 💡 개념 확인 퀴즈
+# 개념 확인 퀴즈 💡
 
-<div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-{{ theme_color }}-500 max-w-2xl mx-auto">
+<div class="bg-white p-8 rounded-2xl shadow-xl border-2 border-{{ theme_color }}-200 text-left">
 
-::: quiz {id: "{{ quiz.id }}", type: "{{ quiz.type }}", difficulty: "{{ quiz.difficulty }}"}
 {{ quiz.question }}
 
 {% for choice in quiz.choices %}
-- [{{ 'x' if choice.is_correct else ' ' }}] {{ choice.text }}
+- [ ] {{ choice.text }}
 {% endfor %}
-:::
 
 </div>
 {% endif %}
 
 ---
 layout: center
-class: text-center
 ---
 
 # 핵심 정리 📝
 
-<div class="bg-{{ theme_color }}-600 text-white p-10 rounded-3xl shadow-2xl inline-block text-left max-w-4xl">
-  <ul class="space-y-4 text-xl list-none">
-    {% for item in summary %}
-    <li class="flex items-start gap-4">
-      <div class="i-carbon-checkmark mt-1 flex-shrink-0" />
-      <span>{{ item }}</span>
-    </li>
-    {% endfor %}
-  </ul>
+<div class="bg-{{ theme_color }}-600 text-white p-10 rounded-3xl shadow-2xl text-left">
+
+{% for item in summary %}
+- **{{ item }}**
+{% endfor %}
+
 </div>
