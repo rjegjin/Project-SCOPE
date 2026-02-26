@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+__pycache__/
+.DS_Store
+.vscode/
+.idea/
+output/
+.temp/
+*.tmp
