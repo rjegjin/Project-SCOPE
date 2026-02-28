@@ -1,0 +1,100 @@
+title: 화학 1단원
+subtitle: 1차시 - 물리 변화와 화학 변화
+theme_color: cyan
+objectives:
+  - "물리 변화와 화학 변화의 차이점을 원자 수준에서 설명할 수 있다."
+  - "입자 모형을 사용하여 성질 변화의 원인을 분석할 수 있다."
+
+opening_question:
+  text: "모양이 변하면 성질도 변할까요?"
+  caption: "종이를 비행기로 접었을 때와 종이를 불에 태웠을 때, 그 차이는 무엇일까요?"
+
+sections:
+  - title: "생각 열기: 종이의 두 갈래 길"
+    layout: default
+    columns:
+      - title: "종이를 찢으면?"
+        image: "https://st2.depositphotos.com/1799455/11897/i/450/depositphotos_118977092-stock-photo-person-tearing-paper.jpg"
+        text: "크기와 모양은 변하지만, 본질은 여전히 '종이'입니다."
+      - title: "종이를 태우면?"
+        image: "https://media.istockphoto.com/id/1471501598/photo/burning-cutting-from-a-newspaper-with-blank-space-for-your-copy.jpg?s=612x612&w=0&k=20&c=-t9MrbvZLVP7xXUdN1n7dpvugkHQ1nysdKx6WJ31qXA="
+        text: "빛과 열을 내며 재와 기체로 변하고, 더 이상 '종이'가 아닙니다."
+
+  - title: "1. 물리 변화 (Physical Change)"
+    layout: default
+    content: |
+      물질의 **고유한 성질**은 변하지 않고, 상태나 모양만 변하는 현상.
+      - 분자의 **배열**만 바뀝니다.
+      - 분자의 **종류**는 그대로입니다.
+    columns:
+      - title: "예시 1: 상태 변화"
+        text: "얼음(고체)이 녹아 물(액체)이 되거나 수증기(기체)가 되는 현상. 모두 H₂O 분자로 이루어져 있습니다."
+      - title: "예시 2: 모양 변화"
+        text: "유리창이 깨지거나 빈 캔이 찌그러지는 현상."
+
+  - title: "심화 탐구: 설탕물의 비밀"
+    layout: center
+    content: |
+      "설탕이 물에 녹아 보이지 않는데, 왜 물리 변화인가요?"
+      설탕물을 먹으면 **단맛**이 납니다. (성질 유지)
+      물을 증발시키면 다시 **흰색 설탕 결정**을 얻을 수 있습니다. (재결정)
+
+  - title: "2. 화학 변화 (Chemical Change)"
+    layout: default
+    content: |
+      어떤 물질이 성질이 전혀 다른 **새로운 물질**로 변하는 현상.
+      - **원자의 배열**이 바뀝니다.
+      - 분자의 **종류**가 바뀝니다.
+
+  - title: "화학 변화의 다양한 예시"
+    layout: default
+    columns:
+      - title: "연소 (Combustion)"
+        text: "양초가 타면 빛과 열을 내며 이산화 탄소와 물이라는 완전히 다른 물질이 됩니다."
+      - title: "산화와 부식"
+        text: "단단한 철이 녹슬어 붉고 푸석푸석해지거나, 깎아둔 사과가 갈변하는 현상."
+      - title: "앙금 생성과 기체 발생"
+        text: "투명한 용액을 섞었을 때 고체(앙금)가 생기거나, 반죽이 부풀어 오르는 현상."
+
+  - title: "입자 모형으로 비교하기"
+    layout: default
+    columns:
+      - title: "물리 변화 (물의 증발)"
+        text: "분자 사이의 거리만 멀어질 뿐, 분자의 종류(H₂O)는 변하지 않습니다.<br>**변화함:** 분자의 배열<br>**변함없음:** 원자의 배열, 분자의 종류"
+      - title: "화학 변화 (물의 합성)"
+        text: "원자가 재배열되어 완전히 새로운 분자가 탄생합니다. (2H₂ + O₂ → 2H₂O)<br>**변화함:** 원자의 배열, 분자의 종류<br>**변함없음:** 원자의 종류와 개수"
+
+  - title: "핵심 정리: 물리 vs 화학"
+    layout: default
+    comparison:
+      headers:
+        - text: "구분"
+        - text: "물리 변화"
+        - text: "화학 변화"
+      rows:
+        - label: "성질의 변화"
+          cells: ["없음 (유지)", "있음 (새 물질)"]
+        - label: "배열의 변화"
+          cells: ["분자의 배열 바뀜", "원자의 배열 바뀜"]
+        - label: "변하지 않는 것"
+          cells: ["원자의 종류/개수, 분자의 종류/개수", "원자의 종류/개수, 총 질량"]
+
+summary:
+  - "물리 변화는 성질은 그대로인 채 모양이나 상태만 변하는 현상이다."
+  - "화학 변화는 원자 배열이 달라져 새로운 성질을 가진 물질이 생성되는 현상이다."
+  - "두 변화 모두 원자의 종류와 총 개수는 변하지 않는다."
+
+quiz:
+  id: "chem-change-q1"
+  type: "multiple-choice"
+  difficulty: "mid"
+  question: "다음 현상 중 물리 변화에 해당하는 것은?"
+  choices:
+    - text: "철이 녹슬어 붉게 변한다."
+      is_correct: false
+    - text: "사과를 깎아두면 갈색이 된다."
+      is_correct: false
+    - text: "드라이아이스가 점점 작아진다."
+      is_correct: true
+    - text: "달걀을 익혔더니 단단해진다."
+      is_correct: false

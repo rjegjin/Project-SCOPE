@@ -26,3 +26,10 @@
     - **Build Optimization:** Resolved Slidev/Vite build errors (missing end tags and asset resolution issues) by simplifying template HTML and switching to Markdown-friendly structures.
     - **Static Export:** Successfully exported the Mendel unit as a standalone static site in `dist/03_mendel/`.
 - **Status:** Engine stabilized and quality vastly improved. Ready for full-scale unit production.
+
+## [2026-02-28] - Chemistry Content Migration (Manual)
+- **Action:** Manually migrated the first chemistry lesson to S.C.O.P.E. YAML format.
+- **Details:**
+    - Created `data/1_chemical_change.yaml` based on the legacy HTML from `2026-mid3-Chem_Physics`.
+    - Executed `scripts/build_all.py` to automatically generate the Slide (`.md`), Exam (`.html`), and PPTX for the new unit.
+- **Status:** Migration process validated manually. Ready to migrate the remaining chemistry lessons or upgrade the automatic migration script.
